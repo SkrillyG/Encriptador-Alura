@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Alura Challenge</title>
+        <link rel="Icon" href="imagenes/510263316ffa2f27ceb8534e57b381c6_icon.png">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        <script src="script.js" defer></script>
+
+    </head>
+
+    <body>
+
+        <header>
+
+            <img src="imagenes/Logo.png" alt="Logo Alura">
+
+        </header>
+
+        <main>
+
+            <form id="form-mensaje">
+
+                <label for="textoEncriptar" class="instruccion">Escribe el Texto a Encriptar</label>
+
+                <div id="divSombra" class="contenedorSombra">
+
+                    <textarea onblur="quitarSombras();" onfocus="mostrarSombras();" id="textoEncriptar" class="inputEncriptar" cols="30" rows="10" ></textarea>
+                </div>
+
+
+                <span id="warning" class="warning-message">
+
+                    <img src="imagenes/download.png" alt="Advertencia">
+                    <p id="p-advertencia">solo letras minúsculas y sin acentos</p>
+
+                </span>
+
+                <section class="advertencia">
+
+                    <img src="imagenes/exclamacion.png" alt="Advertencia">
+                    <p>Escribe solo con letras minúsculas y sin acentos</p>
+
+                </section>
+
+                <section class="enviar-formulario">
+
+                    <div class="btn-sombra"><input class="btn-oscuro" onclick="procesarMensaje(1);" type="submit" value="Encriptar"></div>
+                    <div id="div-desenc" class="btn-sombra"><input class="btn-claro" onclick="procesarMensaje(2);" type="submit" value="Desencriptar" ></div>
+
+                </section>
+                
+            </form>
+
+            <div id="area-encriptada">
+
+                <p id="mensaje-encriptado"></p>
+
+                <div id="mensaje-no-encontrado">
+
+                    <img src="imagenes/Muñeco.png" alt="No se ha encontrado ningún mensaje">
+                    <p class="bold">NINGUN MENSAJE FUE ENCONTRADO </p>
+                    <p class="light"> Escriba el mensaje que quieras encriptar o desencriptar.</p>
+
+                </div>
+
+                <div id="div-sombra2" class="btn-sombra2"><button onclick="copiarAlPortapapeles();" id="btn-copy" class="btn-copiar">COPIAR</button></div>
+
+            </div>
+
+        </main>
+
+        <footer>
+
+            <img src="imagenes/aluraoracle.png" alt="Logo de oracle y alura">
+
+        </footer>
+
+    </body>
+
+</html>
